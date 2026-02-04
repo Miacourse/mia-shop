@@ -106,7 +106,11 @@ const renderProducts = (category = 'all', searchTerm = '') => {
 
     // Search Filter
     if (searchTerm) {
-        filtered = filtered.filter(p => p.title.toLowerCase().includes(searchTerm.toLowerCase()));
+        const lowerTerm = searchTerm.toLowerCase();
+        filtered = filtered.filter(p =>
+            p.title.toLowerCase().includes(lowerTerm) ||
+            p.category.toLowerCase().includes(lowerTerm)
+        );
     }
 
     if (filtered.length === 0) {

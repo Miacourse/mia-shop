@@ -1,0 +1,18 @@
+/* Footer Icons */
+.footer-icons {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.footer-icons a {
+    color: var(--text-light);
+    font-size: 1.8rem;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.footer-icons a:hover {
+    color: var(--primary);
+    transform: translateY(-3px);
+}
